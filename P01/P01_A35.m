@@ -1,4 +1,16 @@
-f = imread('C:\Users\neo\Dropbox\Documents\ZHAW\HS2014\BV\P01\lenaC.tif');
+f = imread('lenaC.tif');
 whos f;
 figure(1);
-imshow(f);
+imshow(f, []);
+[x, y, z] = size(f);
+r = f(1:x,1:y,1);
+figure(2);
+imshow(r, []);
+g = f(1:x,1:y,2);
+figure(3);
+imshow(g, []);
+b = f(1:x,1:y,3);
+figure(4);
+imshow(b, []);
+% f(1:x,1:y,1) = 0;
+% imshow(f, []);

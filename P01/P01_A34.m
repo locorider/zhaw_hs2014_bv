@@ -1,5 +1,5 @@
 
-f = imread('C:\Users\neo\Dropbox\Documents\ZHAW\HS2014\BV\P01\lenaV.tif');
+f = imread('lenaV.tif');
 
 [w h] = size(f);
 wh = w / 2;
@@ -10,13 +10,13 @@ q1 = f(wh-1:w, 1:hh);
 q2 = f(1:wh, hh:h-1);
 q3 = f(wh:w-1, hh:h-1);
 figure(1);
-imshow(q0);
+imshow(q0, []);
 figure(2);
-imshow(q1);
+imshow(q1, []);
 figure(3);
-imshow(q2);
+imshow(q2, []);
 figure(4);
-imshow(q3);
+imshow(q3, []);
 
 nf = uint8(zeros(w, h));
 q0sz = size(q0);
@@ -46,5 +46,5 @@ for x = wh:1:w-1
     end
 end
 figure(5);
-imshow(nf);
+imshow(nf, []);
 % for x = 1:1:q0sz
