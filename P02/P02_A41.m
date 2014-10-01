@@ -1,4 +1,4 @@
-[angle, numviews, ppV, views] = readViews('ct3.asc');
+[angle, numviews, ppV, views] = readViews('ct2.asc');
 
 [x, y] = size(views);
 figure(1);
@@ -10,7 +10,7 @@ rot = 0;
 for x = 1:1:numviews
     img = double(zeros(ppV, ppV));
     v = views(:, x);
-    v = (v - min(v)) / max(v);
+    % v = (v - min(v)) / max(v);
     for i = 1:1:ppV
         img(:, i) = v(i, :);
     end    
